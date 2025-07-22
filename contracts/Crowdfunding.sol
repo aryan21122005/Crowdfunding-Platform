@@ -64,4 +64,9 @@ contract Crowdfunding {
     function getContractBalance() public view returns (uint) {
         return address(this).balance;
     }
+
+    // ✅ New Function: Get contribution details of any address
+    function getContributorDetails(address contributor) public view returns (uint amountContributed) {
+        return contributions[contributor];
+    }
 }
